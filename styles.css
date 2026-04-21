@@ -250,8 +250,17 @@ li {
   align-self: stretch;
 }
 
+.hero-media {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
 .image-stack {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   min-height: 100%;
   margin: 0;
 }
@@ -269,10 +278,8 @@ li {
 }
 
 .stack-front {
-  position: absolute;
-  left: 0;
-  bottom: -1rem;
-  width: 68%;
+  position: static;
+  width: min(68%, 22rem);
   min-height: 19rem;
   border: 0.5rem solid rgba(255, 250, 242, 0.85);
   box-shadow: 0 20px 50px rgba(24, 33, 45, 0.18);
@@ -515,9 +522,8 @@ input:focus {
   }
 
   .stack-front {
-    position: static;
     width: 78%;
-    margin: -4rem 0 0 auto;
+    margin: 0 auto;
   }
 
   .site-footer {
