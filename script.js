@@ -7,6 +7,10 @@ const formConfigs = {
     recipient: "webforms@althealth.store",
     subject: "AltHealth Consultation Request",
   },
+  form03: {
+    recipient: "webforms@althealth.store",
+    subject: "AltHealth Brand Application",
+  },
 };
 
 function setSubmitting(form, submitting) {
