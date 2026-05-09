@@ -11,6 +11,10 @@ const formConfigs = {
     recipient: "webforms@althealth.store",
     subject: "AltHealth Brand Application",
   },
+  form04: {
+    recipient: "webforms@althealth.store",
+    subject: "AltHealth Venture Network Application",
+  },
 };
 
 function setSubmitting(form, submitting) {
@@ -42,6 +46,12 @@ function submitForm(form, config) {
     const mailto = buildMailto(form, config);
     window.location.href = mailto;
     form.reset();
+
+    const successEl = document.getElementById(form.id + "-success");
+    if (successEl) {
+      form.style.display = "none";
+      successEl.classList.add("visible");
+    }
   } catch (error) {
     window.alert(error.message || "Sorry, something went wrong. Please try again later.");
   } finally {

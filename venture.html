@@ -918,7 +918,8 @@
               </ul>
             </div>
             <div>
-              <form class="venture-form" id="venture-form" novalidate>
+              <form class="venture-form" id="form04" novalidate>
+                <input type="hidden" name="id" value="form04" />
                 <div>
                   <label class="venture-form-label" for="vf-name">Your Name</label>
                   <input type="text" id="vf-name" name="name" placeholder="Jane Smith" required />
@@ -946,7 +947,7 @@
                 <button type="submit" class="button primary" style="width:100%;">Submit Application</button>
                 <p class="microcopy" style="text-align:center;"><em>We review all applications within 48 hours. No commitment required.</em></p>
               </form>
-              <div class="venture-success" id="venture-success">
+              <div class="venture-success" id="form04-success">
                 ✓ Application received! We'll be in touch within 48 hours.
               </div>
             </div>
@@ -999,12 +1000,7 @@
         });
       });
 
-      // Application form
-      document.getElementById('venture-form').addEventListener('submit', function (e) {
-        e.preventDefault();
-        this.style.display = 'none';
-        document.getElementById('venture-success').classList.add('visible');
-      });
     </script>
+    <script src="./script.js"></script>
   </body>
 </html>
