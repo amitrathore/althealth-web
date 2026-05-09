@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AltHealth Venture Network: Build Your Own Wellness Commerce Venture</title>
+    <meta
+      name="description"
+      content="Launch a practitioner-powered wellness marketplace in your niche, community, or region — powered by AltHealth's software, brand network, and proven playbooks."
+    />
+    <meta property="og:title" content="AltHealth Venture Network: Build Your Own Wellness Commerce Venture" />
+    <meta
+      property="og:description"
+      content="Launch a practitioner-powered wellness marketplace in your niche, community, or region — powered by AltHealth's software, brand network, and proven playbooks."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://new.althealth.me/public/assets/images/image13.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://new.althealth.me/public/assets/images/image13.jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body { font-family: "Manrope", sans-serif; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const { useState } = React;
+
+      function App() {
+        const [activeTab, setActiveTab] = useState("partner");
+        const [email, setEmail] = useState("");
+        const [submitted, setSubmitted] = useState(false);
+
+        const tiers = {
+          partner: {
+            label: "Partner",
+            tagline: "Start earning from your wellness network.",
+            description: "Refer brands and practitioners into AltHealth and earn revenue share — no market to operate, no exclusivity required.",
+            price: "Free to join",
+            setup: "$0 setup",
+            monthly: "$0/month",
+            color: "from-emerald-400 to-teal-500",
+            accent: "emerald",
+            icon: "🌱",
+            features: [
+              "AltHealth Partner certification",
+              "Referral dashboard & tracking links",
+              "Co-branded landing page",
+              "Sales scripts & email templates",
+              "Operator training modules",
+              "20% revenue share on sourced brands",
+              "10% ongoing residual after year one",
+              "Performance-based upgrade path",
+            ],
+            bestFor: ["Wellness creators & influencers", "Brand consultants", "Practitioner community builders", "Health coaches", "Clinic consultants"],
+            cta: "Become a Partner",
+          },
+          operator: {
+            label: "Market Operator",
+            tagline: "Launch an AltHealth-powered market.",
+            description: "Build a practitioner-powered commerce network in your niche, geography, or community using AltHealth's platform, brand, and playbooks.",
+            price: "From $10,000",
+            setup: "$10,000 setup",
+            monthly: "$1,000/month",
+            color: "from-violet-500 to-purple-600",
+            accent: "violet",
+            icon: "🏗️",
+            features: [
+              "Defined market rights (niche/geo/community)",
+              "Operator dashboard & CRM tools",
+              "Co-branded market page",
+              "Full operator playbook",
+              "Monthly group coaching",
+              "40% of brand subscription revenue",
+              "30% of platform fees in your market",
+              "Conditional exclusivity on milestones",
+            ],
+            bestFor: ["Serious operators & agency owners", "Wellness community leaders", "Category experts with networks", "Clinic growth specialists", "Former brand reps"],
+            cta: "Apply as Market Operator",
+          },
+          venture: {
+            label: "Venture Partner",
+            tagline: "Build a category-defining wellness commerce venture.",
+            description: "Partner with AltHealth to scale a major vertical, region, or institutional market with enhanced economics and venture-style upside.",
+            price: "Custom / $50K+",
+            setup: "Custom setup",
+            monthly: "Custom minimums",
+            color: "from-amber-400 to-orange-500",
+            accent: "amber",
+            icon: "🚀",
+            features: [
+              "Strategic vertical or regional rights",
+              "Dedicated strategic support team",
+              "Sub-operator rights",
+              "Custom co-branding & market identity",
+              "50% of brand subscription revenue",
+              "40% of platform fees in your market",
+              "Profit share on market P&L",
+              "Phantom equity / JV potential",
+            ],
+            bestFor: ["Proven founders & operators", "National practitioner associations", "Wellness media companies", "Clinic group operators", "International market builders"],
+            cta: "Apply as Venture Partner",
+          },
+        };
+
+        const active = tiers[activeTab];
+
+        const steps = [
+          { num: "01", title: "Apply", desc: "Tell us about your network, niche, and operator goals." },
+          { num: "02", title: "Pick Your Market", desc: "Choose a geography, specialty, category, or community." },
+          { num: "03", title: "Get Certified", desc: "Complete AltHealth Academy training and compliance certification." },
+          { num: "04", title: "Launch", desc: "Onboard your first brands and practitioners using our playbooks." },
+          { num: "05", title: "Activate", desc: "Drive recommendations, campaigns, and community events." },
+          { num: "06", title: "Scale & Graduate", desc: "Hit milestones, earn market rights, and grow to higher tiers." },
+        ];
+
+        const whatYouGet = [
+          { icon: "⚙️", title: "AltHealth Commerce OS", desc: "Brand & practitioner onboarding, attribution tracking, commission engine, analytics, and payout reporting." },
+          { icon: "📋", title: "Launch Playbook", desc: "30/60/90-day plan, brand pitch decks, practitioner scripts, webinar templates, and objection handling." },
+          { icon: "🎓", title: "AltHealth Academy", desc: "Wellness commerce training, FTC disclosure basics, brand sales, practitioner activation, and compliance certification." },
+          { icon: "🏷️", title: "Brand Network", desc: "Access to AltHealth's catalog of wellness brands, category collections, and campaign opportunities." },
+          { icon: "👩‍⚕️", title: "Practitioner Tools", desc: "Practitioner storefronts, recommendation links, patient-facing purchase flows, and activation campaigns." },
+          { icon: "🤝", title: "Operator Council", desc: "Monthly operator calls, leaderboards, best practice sharing, deal flow, and conflict resolution." },
+        ];
+
+        const markets = [
+          "Functional Medicine", "Women's Hormones", "Gut Health", "Longevity",
+          "Chiropractors", "Mental Wellness", "Sports Recovery", "Ayurveda",
+          "Biohacking", "Fertility", "Sleep Health", "Skin & Dermatology",
+          "Naturopaths", "Yoga Studios", "Corporate Wellness", "Pet Wellness",
+        ];
+
+        return (
+          <div className="min-h-screen bg-gray-950 text-white font-sans">
+
+            {/* Nav */}
+            <nav className="flex items-center justify-between px-8 py-5 border-b border-gray-800">
+              <div className="flex items-center gap-2">
+                <a href="./index.html" className="text-2xl font-bold tracking-tight text-white">AltHealth</a>
+                <span className="text-xs bg-emerald-500 text-white px-2 py-0.5 rounded-full font-semibold ml-1">Venture Network</span>
+              </div>
+              <div className="hidden md:flex gap-8 text-sm text-gray-400">
+                <a href="#how" className="hover:text-white transition">How It Works</a>
+                <a href="#tiers" className="hover:text-white transition">Operator Tiers</a>
+                <a href="#markets" className="hover:text-white transition">Markets</a>
+                <a href="#apply" className="hover:text-white transition">Apply</a>
+              </div>
+              <a href="#apply" className="bg-emerald-500 hover:bg-emerald-400 text-white text-sm font-semibold px-5 py-2 rounded-full transition">Apply Now</a>
+            </nav>
+
+            {/* Hero */}
+            <section className="relative px-8 pt-24 pb-20 text-center max-w-5xl mx-auto">
+              <div className="inline-block bg-gray-800 text-emerald-400 text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">
+                AltHealth Venture Network
+              </div>
+              <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
+                Build Your Own<br />
+                <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+                  Wellness Commerce Venture
+                </span>
+              </h1>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Launch a practitioner-powered wellness marketplace in your niche, community, or region — powered by AltHealth's software, brand network, attribution engine, and proven playbooks.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#apply" className="bg-emerald-500 hover:bg-emerald-400 text-white font-bold px-8 py-4 rounded-full text-lg transition">
+                  Apply to the Network →
+                </a>
+                <a href="#tiers" className="border border-gray-700 hover:border-gray-500 text-gray-300 font-semibold px-8 py-4 rounded-full text-lg transition">
+                  View Operator Tiers
+                </a>
+              </div>
+              <p className="text-gray-600 text-sm mt-8">You bring the relationships. We bring the rails.</p>
+            </section>
+
+            {/* Stats */}
+            <section className="border-y border-gray-800 bg-gray-900 py-12 px-8">
+              <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                {[
+                  { val: "$10T", label: "Wellness Economy" },
+                  { val: "3 Tiers", label: "Operator Paths" },
+                  { val: "Full", label: "Attribution & Tracking" },
+                  { val: "0", label: "Inventory Required" },
+                ].map((s, i) => (
+                  <div key={i}>
+                    <div className="text-3xl font-extrabold text-emerald-400">{s.val}</div>
+                    <div className="text-gray-500 text-sm mt-1">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Problem / Opportunity */}
+            <section className="px-8 py-20 max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="text-emerald-400 text-xs font-semibold tracking-widest uppercase mb-4">The Opportunity</div>
+                  <h2 className="text-4xl font-extrabold mb-6 leading-tight">The $10T wellness economy needs better operators.</h2>
+                  <p className="text-gray-400 leading-relaxed mb-4">
+                    Patients trust their practitioners. Practitioners know what works. Brands need authentic distribution. But no one has built the infrastructure to connect them at scale — until now.
+                  </p>
+                  <p className="text-gray-400 leading-relaxed">
+                    AltHealth Venture Network lets qualified operators build and run their own practitioner-powered wellness commerce markets — with full software, brand, attribution, and monetization infrastructure provided.
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  {[
+                    { emoji: "🏥", title: "Brands", desc: "Need trusted, practitioner-led distribution with real attribution." },
+                    { emoji: "👩‍⚕️", title: "Practitioners", desc: "Want to recommend trusted products and earn transparently." },
+                    { emoji: "🧑‍💼", title: "Operators", desc: "Want to build a real business without building from scratch." },
+                    { emoji: "🧑‍🤝‍🧑", title: "Patients", desc: "Want to buy what their trusted practitioners actually recommend." },
+                  ].map((item, i) => (
+                    <div key={i} className="flex gap-4 bg-gray-900 border border-gray-800 rounded-xl p-4">
+                      <span className="text-2xl">{item.emoji}</span>
+                      <div>
+                        <div className="font-semibold text-white">{item.title}</div>
+                        <div className="text-gray-500 text-sm">{item.desc}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* What You Get */}
+            <section className="bg-gray-900 border-y border-gray-800 px-8 py-20">
+              <div className="max-w-5xl mx-auto">
+                <div className="text-center mb-14">
+                  <div className="text-emerald-400 text-xs font-semibold tracking-widest uppercase mb-3">Entrepreneurship-in-a-Box</div>
+                  <h2 className="text-4xl font-extrabold">Everything you need to launch.</h2>
+                  <p className="text-gray-400 mt-3 max-w-xl mx-auto">AltHealth provides the infrastructure. You provide the relationships, hustle, and local trust.</p>
+                </div>
+                <div className="grid md:grid-cols-3 gap-6">
+                  {whatYouGet.map((item, i) => (
+                    <div key={i} className="bg-gray-950 border border-gray-800 rounded-2xl p-6 hover:border-emerald-800 transition">
+                      <div className="text-3xl mb-3">{item.icon}</div>
+                      <div className="font-bold text-white mb-2">{item.title}</div>
+                      <div className="text-gray-500 text-sm leading-relaxed">{item.desc}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Operator Tiers */}
+            <section id="tiers" className="px-8 py-20 max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <div className="text-emerald-400 text-xs font-semibold tracking-widest uppercase mb-3">Three Operator Tiers</div>
+                <h2 className="text-4xl font-extrabold">Choose your operator path.</h2>
+                <p className="text-gray-400 mt-3 max-w-xl mx-auto">Start where you are. Grow into what you want to build.</p>
+              </div>
+
+              {/* Tab Selector */}
+              <div className="flex justify-center gap-2 mb-10">
+                {Object.entries(tiers).map(([key, tier]) => (
+                  <button
+                    key={key}
+                    onClick={() => setActiveTab(key)}
+                    className={`px-5 py-2.5 rounded-full text-sm font-semibold transition ${
+                      activeTab === key
+                        ? "bg-emerald-500 text-white"
+                        : "bg-gray-800 text-gray-400 hover:text-white"
+                    }`}
+                  >
+                    {tier.icon} {tier.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Tier Card */}
+              <div className="bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden">
+                <div className={`bg-gradient-to-r ${active.color} p-8`}>
+                  <div className="flex items-start justify-between flex-wrap gap-4">
+                    <div>
+                      <div className="text-4xl mb-2">{active.icon}</div>
+                      <h3 className="text-3xl font-extrabold text-white">{active.label}</h3>
+                      <p className="text-white opacity-80 mt-1 text-lg">{active.tagline}</p>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-3xl font-extrabold text-white">{active.price}</div>
+                      <div className="text-white opacity-70 text-sm">{active.setup} · {active.monthly}</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-8 grid md:grid-cols-3 gap-8">
+                  <div className="md:col-span-2">
+                    <p className="text-gray-400 mb-6 leading-relaxed">{active.description}</p>
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      {active.features.map((f, i) => (
+                        <div key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                          <span className="text-emerald-400 mt-0.5">✓</span>
+                          <span>{f}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-xs text-gray-500 uppercase tracking-widest mb-3 font-semibold">Best For</div>
+                    <ul className="space-y-2">
+                      {active.bestFor.map((b, i) => (
+                        <li key={i} className="text-sm text-gray-400 flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block"></span>
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                    <a href="#apply" className="mt-8 block text-center bg-white text-gray-900 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition text-sm">
+                      {active.cta} →
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Tier Comparison */}
+              <div className="mt-8 overflow-x-auto">
+                <table className="w-full text-sm text-left border-collapse">
+                  <thead>
+                    <tr className="border-b border-gray-800">
+                      <th className="py-3 pr-6 text-gray-500 font-medium">Feature</th>
+                      <th className="py-3 px-4 text-center text-gray-300 font-semibold">🌱 Partner</th>
+                      <th className="py-3 px-4 text-center text-gray-300 font-semibold">🏗️ Market Operator</th>
+                      <th className="py-3 px-4 text-center text-gray-300 font-semibold">🚀 Venture Partner</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      ["Setup Fee", "Free", "$10,000", "Custom"],
+                      ["Monthly Fee", "$0", "$1,000", "Custom"],
+                      ["Market Rights", "None", "Conditional", "Strategic"],
+                      ["Exclusivity", "—", "Performance-based", "Negotiated"],
+                      ["Revenue Share", "20%", "30–40%", "40–50%"],
+                      ["Profit Share", "—", "—", "✓"],
+                      ["Equity / JV Potential", "—", "—", "✓"],
+                      ["Dedicated Support", "Self-serve", "Group coaching", "Dedicated team"],
+                      ["Sub-Operator Rights", "—", "—", "✓"],
+                    ].map(([feature, p, mo, vp], i) => (
+                      <tr key={i} className="border-b border-gray-900 hover:bg-gray-900 transition">
+                        <td className="py-3 pr-6 text-gray-400">{feature}</td>
+                        <td className="py-3 px-4 text-center text-gray-300">{p}</td>
+                        <td className="py-3 px-4 text-center text-gray-300">{mo}</td>
+                        <td className="py-3 px-4 text-center text-gray-300">{vp}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            {/* How It Works */}
+            <section id="how" className="bg-gray-900 border-y border-gray-800 px-8 py-20">
+              <div className="max-w-5xl mx-auto">
+                <div className="text-center mb-14">
+                  <div className="text-emerald-400 text-xs font-semibold tracking-widest uppercase mb-3">The Path</div>
+                  <h2 className="text-4xl font-extrabold">From application to venture.</h2>
+                </div>
+                <div className="grid md:grid-cols-3 gap-6">
+                  {steps.map((step, i) => (
+                    <div key={i} className="bg-gray-950 border border-gray-800 rounded-2xl p-6">
+                      <div className="text-4xl font-extrabold text-gray-800 mb-3">{step.num}</div>
+                      <div className="font-bold text-white mb-2">{step.title}</div>
+                      <div className="text-gray-500 text-sm leading-relaxed">{step.desc}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Markets */}
+            <section id="markets" className="px-8 py-20 max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <div className="text-emerald-400 text-xs font-semibold tracking-widest uppercase mb-3">Open Markets</div>
+                <h2 className="text-4xl font-extrabold">Find your market.</h2>
+                <p className="text-gray-400 mt-3 max-w-xl mx-auto">Operators can build markets by niche, specialty, geography, or community. Many categories are still open.</p>
+              </div>
+              <div className="flex flex-wrap gap-3 justify-center">
+                {markets.map((m, i) => (
+                  <span key={i} className="bg-gray-900 border border-gray-800 text-gray-300 text-sm px-4 py-2 rounded-full hover:border-emerald-700 hover:text-emerald-400 transition cursor-pointer">
+                    {m}
+                  </span>
+                ))}
+                <span className="bg-gray-900 border border-dashed border-gray-700 text-gray-600 text-sm px-4 py-2 rounded-full">
+                  + Your Market
+                </span>
+              </div>
+            </section>
+
+            {/* Apply */}
+            <section id="apply" className="bg-gradient-to-b from-gray-900 to-gray-950 border-t border-gray-800 px-8 py-20">
+              <div className="max-w-2xl mx-auto text-center">
+                <div className="text-emerald-400 text-xs font-semibold tracking-widest uppercase mb-4">Apply Now</div>
+                <h2 className="text-4xl font-extrabold mb-4">Ready to build your wellness commerce venture?</h2>
+                <p className="text-gray-400 mb-10 leading-relaxed">
+                  Applications are reviewed for market fit, network strength, and operator readiness. We're accepting a founding cohort of operators now.
+                </p>
+                {submitted ? (
+                  <div className="bg-emerald-900 border border-emerald-700 rounded-2xl p-8 text-emerald-300 font-semibold text-lg">
+                    ✓ Application received! We'll be in touch within 48 hours.
+                  </div>
+                ) : (
+                  <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 text-left space-y-4">
+                    <div>
+                      <label className="text-gray-400 text-sm mb-1 block">Your Name</label>
+                      <input className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500" placeholder="Jane Smith" />
+                    </div>
+                    <div>
+                      <label className="text-gray-400 text-sm mb-1 block">Email Address</label>
+                      <input
+                        className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500"
+                        placeholder="jane@example.com"
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                      />
+                    </div>
+                    <div>
+                      <label className="text-gray-400 text-sm mb-1 block">Which tier interests you?</label>
+                      <select className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500">
+                        <option>🌱 Partner — Start earning from my network</option>
+                        <option>🏗️ Market Operator — Launch a defined market</option>
+                        <option>🚀 Venture Partner — Build a major wellness venture</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="text-gray-400 text-sm mb-1 block">What market are you thinking about?</label>
+                      <input className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500" placeholder="e.g. Functional Medicine, Women's Health, Austin TX..." />
+                    </div>
+                    <div>
+                      <label className="text-gray-400 text-sm mb-1 block">Tell us about your network</label>
+                      <textarea className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 h-24 resize-none" placeholder="Who do you know? What communities do you serve? What's your background in wellness?" />
+                    </div>
+                    <button
+                      onClick={() => setSubmitted(true)}
+                      className="w-full bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-4 rounded-xl transition text-base"
+                    >
+                      Submit Application →
+                    </button>
+                    <p className="text-gray-600 text-xs text-center">We review all applications within 48 hours. No commitment required.</p>
+                  </div>
+                )}
+              </div>
+            </section>
+
+            {/* Footer */}
+            <footer className="border-t border-gray-800 px-8 py-10 text-center text-gray-600 text-sm">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <a href="./index.html" className="text-white font-bold text-lg">AltHealth</a>
+                <span className="text-xs bg-emerald-900 text-emerald-400 px-2 py-0.5 rounded-full font-semibold">Venture Network</span>
+              </div>
+              <p className="mb-4">The Wellness Marketplace Where Trust Pays.</p>
+              <div className="flex justify-center gap-6 text-gray-700">
+                <a href="./brands.html" className="hover:text-gray-400 transition">For Brands</a>
+                <a href="./chiropractors.html" className="hover:text-gray-400 transition">For Practitioners</a>
+                <a href="./terms.html" className="hover:text-gray-400 transition">Terms</a>
+                <a href="./privacy.html" className="hover:text-gray-400 transition">Privacy</a>
+                <a href="mailto:support@althealth.me" className="hover:text-gray-400 transition">Contact</a>
+              </div>
+              <p className="mt-6 text-gray-800">© AltHealth. All rights reserved.</p>
+            </footer>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
