@@ -842,6 +842,24 @@ input:focus {
   margin-bottom: 2rem;
 }
 
+.pricing-intro {
+  margin: -0.5rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.practitioner-pricing-grid {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 44rem;
+}
+
+@media (max-width: 600px) {
+  .practitioner-pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 28rem;
+  }
+}
+
 .brand-pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
