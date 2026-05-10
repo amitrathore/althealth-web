@@ -324,14 +324,30 @@
           </div>
           <form id="form03" class="contact-form brand-form" novalidate>
             <input type="hidden" name="id" value="form03" />
-            <label class="sr-only" for="form03-name">Your Name</label>
+            <label class="sr-only" for="form03-first-name">First Name</label>
             <input
               type="text"
-              name="name"
-              id="form03-name"
-              placeholder="Your Name"
-              maxlength="256"
+              name="first_name"
+              id="form03-first-name"
+              placeholder="First Name"
+              maxlength="128"
               required
+            />
+            <label class="sr-only" for="form03-last-name">Last Name</label>
+            <input
+              type="text"
+              name="last_name"
+              id="form03-last-name"
+              placeholder="Last Name"
+              maxlength="128"
+            />
+            <label class="sr-only" for="form03-phone">Phone</label>
+            <input
+              type="tel"
+              name="phone"
+              id="form03-phone"
+              placeholder="Phone"
+              maxlength="32"
             />
             <label class="sr-only" for="form03-email">Work Email</label>
             <input

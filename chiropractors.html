@@ -69,14 +69,30 @@
             <p>Or apply to join the Founding Circle:</p>
             <form id="form02" class="contact-form" novalidate>
               <input type="hidden" name="id" value="form02" />
-              <label class="sr-only" for="form02-name">Name</label>
+              <label class="sr-only" for="form02-first-name">First Name</label>
               <input
                 type="text"
-                name="name"
-                id="form02-name"
-                placeholder="Name"
-                maxlength="256"
+                name="first_name"
+                id="form02-first-name"
+                placeholder="First Name"
+                maxlength="128"
                 required
+              />
+              <label class="sr-only" for="form02-last-name">Last Name</label>
+              <input
+                type="text"
+                name="last_name"
+                id="form02-last-name"
+                placeholder="Last Name"
+                maxlength="128"
+              />
+              <label class="sr-only" for="form02-phone">Phone</label>
+              <input
+                type="tel"
+                name="phone"
+                id="form02-phone"
+                placeholder="Phone"
+                maxlength="32"
               />
               <label class="sr-only" for="form02-email">Email</label>
               <input

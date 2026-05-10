@@ -156,6 +156,14 @@
           </div>
           <form id="form01" class="signup-form" novalidate>
             <input type="hidden" name="id" value="form01" />
+            <label class="sr-only" for="form01-first-name">First Name</label>
+            <input
+              type="text"
+              name="first_name"
+              id="form01-first-name"
+              placeholder="First Name"
+              maxlength="128"
+            />
             <label class="sr-only" for="form01-email">Email Address</label>
             <input
               type="email"
@@ -164,15 +172,6 @@
               placeholder="Email Address"
               maxlength="128"
               required
-            />
-            <label class="sr-only" for="form01-your-url">Your Url</label>
-            <input
-              type="text"
-              name="your-url"
-              id="form01-your-url"
-              placeholder="Your Url"
-              maxlength="128"
-              autocomplete="off"
             />
             <button type="submit" class="button light">Subscribe</button>
           </form>
