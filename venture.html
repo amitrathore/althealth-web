@@ -454,6 +454,67 @@
         border-color: rgba(36, 80, 214, 0.5);
       }
 
+      /* Venture Partner equity tiers */
+      .venture-equity-tiers {
+        margin-top: 1.75rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--line);
+      }
+
+      .venture-equity-label {
+        font-size: 0.74rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--brand);
+        margin-bottom: 0.85rem;
+      }
+
+      .venture-equity-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+      }
+
+      .venture-equity-card {
+        padding: 1rem 1.1rem;
+        border-radius: var(--radius-md);
+        background: linear-gradient(160deg, rgba(232, 239, 255, 0.6), rgba(255, 255, 255, 0.85));
+        border: 1px solid rgba(26, 61, 184, 0.15);
+        text-align: center;
+      }
+
+      .venture-equity-card--mid {
+        background: linear-gradient(160deg, rgba(210, 225, 255, 0.7), rgba(232, 239, 255, 0.9));
+        border-color: rgba(26, 61, 184, 0.25);
+      }
+
+      .venture-equity-card--top {
+        background: linear-gradient(160deg, rgba(26, 61, 184, 0.1), rgba(12, 26, 79, 0.08));
+        border-color: rgba(26, 61, 184, 0.35);
+      }
+
+      .venture-equity-amount {
+        font-family: "Fraunces", serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--brand-deep);
+        line-height: 1;
+        margin-bottom: 0.4rem;
+      }
+
+      .venture-equity-desc {
+        font-size: 0.78rem;
+        color: var(--muted);
+        line-height: 1.45;
+      }
+
+      @media (max-width: 640px) {
+        .venture-equity-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
       .venture-success {
         display: none;
         padding: 1.75rem;
@@ -675,19 +736,19 @@
           </div>
 
           <div class="tier-tabs" role="tablist">
-            <button class="tier-tab active" data-tier="partner" role="tab" aria-selected="true">🌱 Partner</button>
+            <button class="tier-tab active" data-tier="partner" role="tab" aria-selected="true">🌱 Business Connector</button>
             <button class="tier-tab" data-tier="operator" role="tab" aria-selected="false">🏗️ Market Operator</button>
             <button class="tier-tab" data-tier="venture" role="tab" aria-selected="false">🚀 Venture Partner</button>
           </div>
 
-          <!-- Partner -->
+          <!-- Business Connector -->
           <div class="tier-panel active" data-panel="partner">
             <div class="tier-card">
               <div class="tier-header tier-header--partner">
                 <div>
                   <div class="tier-icon">🌱</div>
-                  <h3>Partner</h3>
-                  <p>Start earning from your wellness network.</p>
+                  <h3>Business Connector</h3>
+                  <p>Earn by connecting brands &amp; practitioners to the network.</p>
                 </div>
                 <div class="tier-price-block">
                   <div class="tier-price">Free to join</div>
@@ -696,16 +757,16 @@
               </div>
               <div class="tier-body">
                 <div class="tier-body-main">
-                  <p>Refer brands and practitioners into AltHealth and earn revenue share — no market to operate, no exclusivity required.</p>
+                  <p>Introduce brands and practitioners to AltHealth and earn a revenue share on the business you bring in — no market to operate, no exclusivity required.</p>
                   <div class="tier-features-grid">
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> AltHealth Partner certification</div>
+                    <div class="tier-feature-item"><span class="tier-check">✓</span> AltHealth Connector certification</div>
                     <div class="tier-feature-item"><span class="tier-check">✓</span> Referral dashboard &amp; tracking links</div>
                     <div class="tier-feature-item"><span class="tier-check">✓</span> Co-branded landing page</div>
                     <div class="tier-feature-item"><span class="tier-check">✓</span> Sales scripts &amp; email templates</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Operator training modules</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> 20% revenue share on sourced brands</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> 10% ongoing residual after year one</div>
+                    <div class="tier-feature-item"><span class="tier-check">✓</span> Connector training modules</div>
+                    <div class="tier-feature-item"><span class="tier-check">✓</span> 5–10% revenue share on referred business</div>
                     <div class="tier-feature-item"><span class="tier-check">✓</span> Performance-based upgrade path</div>
+                    <div class="tier-feature-item"><span class="tier-check">✓</span> Access to brand &amp; practitioner network</div>
                   </div>
                 </div>
                 <div class="tier-sidebar">
@@ -717,7 +778,7 @@
                     <li>Health coaches</li>
                     <li>Clinic consultants</li>
                   </ul>
-                  <a class="button primary" href="#apply">Become a Partner</a>
+                  <a class="button primary" href="#apply">Become a Business Connector</a>
                 </div>
               </div>
             </div>
@@ -746,8 +807,8 @@
                     <div class="tier-feature-item"><span class="tier-check">✓</span> Co-branded market page</div>
                     <div class="tier-feature-item"><span class="tier-check">✓</span> Full operator playbook</div>
                     <div class="tier-feature-item"><span class="tier-check">✓</span> Monthly group coaching</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> 40% of brand subscription revenue</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> 30% of platform fees in your market</div>
+                    <div class="tier-feature-item"><span class="tier-check">✓</span> 30% revenue share in your market</div>
+                    <div class="tier-feature-item"><span class="tier-check">✓</span> Covers brand subscriptions &amp; platform fees</div>
                     <div class="tier-feature-item"><span class="tier-check">✓</span> Conditional exclusivity on milestones</div>
                   </div>
                 </div>
@@ -776,22 +837,39 @@
                   <p>Build a category-defining wellness commerce venture.</p>
                 </div>
                 <div class="tier-price-block">
-                  <div class="tier-price">Custom / $50K+</div>
-                  <div class="tier-price-detail">Custom setup &middot; Custom minimums</div>
+                  <div class="tier-price">$25K – $100K</div>
+                  <div class="tier-price-detail">Buy-in &middot; Equity + 50% rev share</div>
                 </div>
               </div>
               <div class="tier-body">
                 <div class="tier-body-main">
-                  <p>Partner with AltHealth to scale a major vertical, region, or institutional market with enhanced economics and venture-style upside.</p>
+                  <p>Partner with AltHealth to scale a major vertical, region, or institutional market. Receive 50% revenue share plus a commensurate equity grant based on your level of buy-in.</p>
                   <div class="tier-features-grid">
                     <div class="tier-feature-item"><span class="tier-check">✓</span> Strategic vertical or regional rights</div>
                     <div class="tier-feature-item"><span class="tier-check">✓</span> Dedicated strategic support team</div>
                     <div class="tier-feature-item"><span class="tier-check">✓</span> Sub-operator rights</div>
                     <div class="tier-feature-item"><span class="tier-check">✓</span> Custom co-branding &amp; market identity</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> 50% of brand subscription revenue</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> 40% of platform fees in your market</div>
+                    <div class="tier-feature-item"><span class="tier-check">✓</span> 50% revenue share in your market</div>
                     <div class="tier-feature-item"><span class="tier-check">✓</span> Profit share on market P&amp;L</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Phantom equity / JV potential</div>
+                    <div class="tier-feature-item"><span class="tier-check">✓</span> Equity grant commensurate with buy-in</div>
+                    <div class="tier-feature-item"><span class="tier-check">✓</span> JV &amp; expansion rights</div>
+                  </div>
+                  <div class="venture-equity-tiers">
+                    <div class="venture-equity-label">Investment Tiers</div>
+                    <div class="venture-equity-grid">
+                      <div class="venture-equity-card">
+                        <div class="venture-equity-amount">$25K</div>
+                        <div class="venture-equity-desc">Entry buy-in · Equity grant · Regional market rights</div>
+                      </div>
+                      <div class="venture-equity-card venture-equity-card--mid">
+                        <div class="venture-equity-amount">$50K</div>
+                        <div class="venture-equity-desc">Growth buy-in · Enhanced equity · Multi-market rights</div>
+                      </div>
+                      <div class="venture-equity-card venture-equity-card--top">
+                        <div class="venture-equity-amount">$100K</div>
+                        <div class="venture-equity-desc">Strategic buy-in · Maximum equity · National / vertical rights</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="tier-sidebar">
@@ -815,19 +893,19 @@
               <thead>
                 <tr>
                   <th>Feature</th>
-                  <th>🌱 Partner</th>
+                  <th>🌱 Business Connector</th>
                   <th>🏗️ Market Operator</th>
                   <th>🚀 Venture Partner</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>Setup Fee</td><td>Free</td><td>$10,000</td><td>Custom</td></tr>
+                <tr><td>Buy-In / Setup</td><td>Free</td><td>$10,000</td><td>$25K – $100K</td></tr>
                 <tr><td>Monthly Fee</td><td>$0</td><td>$1,000</td><td>Custom</td></tr>
+                <tr><td>Revenue Share</td><td>5–10%</td><td>30%</td><td>50%</td></tr>
+                <tr><td>Equity Grant</td><td>—</td><td>—</td><td>✓ Commensurate with buy-in</td></tr>
+                <tr><td>Profit Share</td><td>—</td><td>—</td><td>✓</td></tr>
                 <tr><td>Market Rights</td><td>None</td><td>Conditional</td><td>Strategic</td></tr>
                 <tr><td>Exclusivity</td><td>—</td><td>Performance-based</td><td>Negotiated</td></tr>
-                <tr><td>Revenue Share</td><td>20%</td><td>30–40%</td><td>40–50%</td></tr>
-                <tr><td>Profit Share</td><td>—</td><td>—</td><td>✓</td></tr>
-                <tr><td>Equity / JV Potential</td><td>—</td><td>—</td><td>✓</td></tr>
                 <tr><td>Dedicated Support</td><td>Self-serve</td><td>Group coaching</td><td>Dedicated team</td></tr>
                 <tr><td>Sub-Operator Rights</td><td>—</td><td>—</td><td>✓</td></tr>
               </tbody>
@@ -931,7 +1009,7 @@
                 <div>
                   <label class="venture-form-label" for="vf-tier">Which tier interests you?</label>
                   <select id="vf-tier" name="tier">
-                    <option>🌱 Partner — Start earning from my network</option>
+                    <option>🌱 Business Connector — Start earning from my network</option>
                     <option>🏗️ Market Operator — Launch a defined market</option>
                     <option>🚀 Venture Partner — Build a major wellness venture</option>
                   </select>
