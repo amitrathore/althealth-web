@@ -346,7 +346,7 @@ heading(s, "Start anywhere. Scale to Venture Partner.", Inches(0.6), Inches(1.25
 table_slide(s,
     ["Tier", "Buy-In", "Rev Share", "Equity", "Market Rights", "Support"],
     [
-        ["🌱 Business Connector", "Free", "5–10%", "—", "None", "Self-serve"],
+        ["🌱 Business Connector", "Free", "5–10% + VP bonus", "—", "None", "Self-serve"],
         ["🏗️ Market Operator", "$10K setup + $1K/mo", "30%", "—", "Conditional", "Group coaching"],
         ["🚀 Venture Partner — Entry", "$25K", "50%", "✓ Entry grant", "Regional", "Dedicated team"],
         ["🚀 Venture Partner — Growth", "$50K", "50%", "✓ Enhanced grant", "Multi-market", "Dedicated team"],
