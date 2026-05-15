@@ -3,18 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AltHealth Venture Network: Build Your Own Wellness Commerce Venture</title>
+    <title>AltHealth Venture Owners: Build a Wellness Commerce Venture</title>
     <meta
       name="description"
-      content="Launch a practitioner-powered wellness marketplace in your niche, community, or region — powered by AltHealth's software, brand network, and proven playbooks."
+      content="Qualified founders and operators can build major wellness commerce ventures on AltHealth's infrastructure. 50% revenue share, equity grants, and strategic rights at $25K–$100K buy-in levels."
     />
-    <meta property="og:title" content="AltHealth Venture Network: Build Your Own Wellness Commerce Venture" />
-    <meta
-      property="og:description"
-      content="Launch a practitioner-powered wellness marketplace in your niche, community, or region — powered by AltHealth's software, brand network, and proven playbooks."
-    />
+    <meta property="og:title" content="AltHealth Venture Owners: Build a Wellness Commerce Venture" />
+    <meta property="og:description" content="Qualified founders and operators can build major wellness commerce ventures on AltHealth's infrastructure. 50% revenue share, equity grants, and strategic rights." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://new.althealth.me/public/assets/images/image13.jpg" />
+    <meta property="og:image:alt" content="AltHealth logo" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://new.althealth.me/public/assets/images/image13.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,12 +23,12 @@
     />
     <link rel="stylesheet" href="./styles.css" />
     <style>
-      /* ── Venture Network page ── */
+      /* ── Venture Owners page ── */
 
       .venture-hero {
         padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 4vw, 3.5rem) clamp(2.5rem, 5vw, 4rem);
         text-align: center;
-        background: linear-gradient(160deg, rgba(227, 235, 255, 0.55), rgba(255, 255, 255, 0.82));
+        background: linear-gradient(160deg, rgba(12, 26, 79, 0.06), rgba(255, 255, 255, 0.9));
       }
 
       .venture-tag {
@@ -60,332 +58,177 @@
         justify-content: center;
       }
 
-      /* Stats band — reuses .opportunity-section base */
-      .venture-stats-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
-        text-align: center;
-      }
-
-      .venture-stat-val {
-        font-family: "Fraunces", serif;
-        font-size: clamp(2rem, 4vw, 3rem);
-        font-weight: 600;
+      /* Qualification gate banner */
+      .qualify-banner {
+        margin: clamp(2rem, 4vw, 3rem) clamp(2rem, 4vw, 3.5rem);
+        padding: 2rem 2.5rem;
+        border-radius: var(--radius-xl);
+        background: linear-gradient(135deg, var(--brand-deep), #162d87, var(--brand));
         color: #fff;
-        line-height: 1;
-        margin-bottom: 0.4rem;
-      }
-
-      .venture-stat-label {
-        font-size: 0.88rem;
-        color: rgba(255, 255, 255, 0.62);
-      }
-
-      /* Stakeholder cards (right col of split-section) */
-      .stakeholder-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.85rem;
-        align-content: start;
+        grid-template-columns: auto 1fr;
+        gap: 1.5rem;
+        align-items: center;
       }
 
-      .stakeholder-card {
-        display: flex;
-        gap: 0.85rem;
-        align-items: flex-start;
-        padding: 1.1rem 1.2rem;
-        border-radius: var(--radius-md);
-        background: linear-gradient(160deg, rgba(255, 255, 255, 0.88), rgba(255, 252, 248, 0.75));
-        border: 1px solid rgba(24, 33, 45, 0.06);
-        box-shadow: 0 4px 12px rgba(24, 33, 45, 0.04);
+      .qualify-banner-icon {
+        font-size: 2.5rem;
+        line-height: 1;
       }
 
-      .stakeholder-icon {
-        font-size: 1.4rem;
-        flex-shrink: 0;
-        line-height: 1.3;
+      .qualify-banner h2 {
+        color: #fff;
+        font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+        margin: 0 0 0.5rem;
       }
 
-      .stakeholder-card h4 {
-        margin: 0 0 0.2rem;
-        font-size: 0.94rem;
-        font-weight: 700;
-        color: var(--ink);
-      }
-
-      .stakeholder-card p {
+      .qualify-banner p {
         margin: 0;
-        font-size: 0.86rem;
-        line-height: 1.5;
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 1.55;
       }
 
-      /* Tier Section */
-      .tier-section {
+      .qualify-criteria {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+        margin-top: 1rem;
+        list-style: none;
+        padding: 0;
+      }
+
+      .qualify-criteria li {
+        font-size: 0.84rem;
+        color: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 999px;
+        padding: 0.3rem 0.85rem;
+        font-weight: 600;
+      }
+
+      /* Investment tier cards */
+      .ownership-tiers-section {
         padding: clamp(2rem, 4vw, 3.5rem);
       }
 
-      .tier-copy {
+      .ownership-tiers-section .tier-copy {
         text-align: center;
         max-width: 48rem;
         margin: 0 auto 2rem;
       }
 
-      .tier-copy p:last-child {
-        margin: 0.5rem 0 0;
+      .ownership-tiers-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
       }
 
-      .tier-tabs {
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-        margin-bottom: 2rem;
-        flex-wrap: wrap;
-      }
-
-      .tier-tab {
-        padding: 0.65rem 1.5rem;
-        border: none;
-        border-radius: 999px;
-        font: inherit;
-        font-size: 0.9rem;
-        font-weight: 700;
-        cursor: pointer;
-        background: var(--brand-soft);
-        color: var(--brand-deep);
-        transition: background 180ms ease, color 180ms ease, transform 150ms ease;
-      }
-
-      .tier-tab:hover {
-        transform: translateY(-1px);
-      }
-
-      .tier-tab.active {
-        background: var(--brand);
-        color: #fff;
-      }
-
-      .tier-panel {
-        display: none;
-      }
-
-      .tier-panel.active {
-        display: block;
-      }
-
-      .tier-card {
+      .ownership-tier-card {
         border-radius: var(--radius-xl);
         overflow: hidden;
         border: 1px solid var(--line);
-        box-shadow: 0 24px 64px rgba(24, 33, 45, 0.10);
-      }
-
-      .tier-header {
+        box-shadow: 0 16px 48px rgba(24, 33, 45, 0.10);
         display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 1.25rem;
-        padding: 2.25rem;
+        flex-direction: column;
       }
 
-      .tier-header--partner  { background: linear-gradient(135deg, #a67a28, #c9982e, #d4a83a); }
-      .tier-header--operator { background: linear-gradient(135deg, var(--brand), #2f4fc7, #3d5fe0); }
-      .tier-header--venture  { background: linear-gradient(135deg, var(--brand-deep), #162d87, var(--brand)); }
+      .ownership-tier-card--mid {
+        box-shadow: 0 24px 64px rgba(26, 61, 184, 0.18);
+        border-color: rgba(26, 61, 184, 0.3);
+        transform: translateY(-4px);
+      }
 
-      .tier-icon {
-        font-size: 2.25rem;
-        margin-bottom: 0.5rem;
+      .ownership-tier-card--top {
+        box-shadow: 0 24px 64px rgba(12, 26, 79, 0.2);
+        border-color: rgba(12, 26, 79, 0.3);
+      }
+
+      .ownership-tier-header {
+        padding: 2rem 2rem 1.5rem;
+        background: linear-gradient(135deg, var(--brand-deep), #162d87, var(--brand));
+        color: #fff;
+      }
+
+      .ownership-tier-header--entry {
+        background: linear-gradient(135deg, var(--brand), #2f4fc7, #3d5fe0);
+      }
+
+      .ownership-tier-header--growth {
+        background: linear-gradient(135deg, #0c1a4f, #162d87, var(--brand));
+      }
+
+      .ownership-tier-header--strategic {
+        background: linear-gradient(135deg, #060e28, #0c1a4f, #162d87);
+      }
+
+      .ownership-tier-amount {
+        font-family: "Fraunces", serif;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-weight: 600;
+        color: #fff;
         line-height: 1;
+        margin-bottom: 0.3rem;
       }
 
-      .tier-header h3 {
-        margin: 0 0 0.3rem;
-        font-family: "Fraunces", serif;
-        font-size: 1.75rem;
-        font-weight: 600;
-        color: #fff;
-        letter-spacing: -0.02em;
-        line-height: 1.05;
-      }
-
-      .tier-header > div > p {
-        margin: 0;
-        font-size: 1rem;
-        color: rgba(255, 255, 255, 0.8);
-      }
-
-      .tier-price-block {
-        text-align: right;
-        flex-shrink: 0;
-      }
-
-      .tier-price {
-        font-family: "Fraunces", serif;
-        font-size: clamp(1.5rem, 3vw, 2.1rem);
-        font-weight: 600;
-        color: #fff;
-        line-height: 1.1;
-      }
-
-      .tier-price-detail {
-        margin-top: 0.25rem;
-        font-size: 0.83rem;
+      .ownership-tier-name {
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
         color: rgba(255, 255, 255, 0.65);
+        margin-bottom: 0.75rem;
       }
 
-      .tier-body {
-        display: grid;
-        grid-template-columns: 1fr 14rem;
-        gap: 0;
+      .ownership-tier-headline {
+        font-family: "Fraunces", serif;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #fff;
+        margin: 0;
+        line-height: 1.2;
+      }
+
+      .ownership-tier-body {
+        padding: 1.75rem 2rem;
         background: linear-gradient(160deg, rgba(255, 255, 255, 0.97), rgba(255, 252, 245, 0.93));
+        flex: 1;
+        display: flex;
+        flex-direction: column;
       }
 
-      .tier-body-main {
-        padding: 2rem 2.25rem;
-        border-right: 1px solid var(--line);
-      }
-
-      .tier-body-main > p {
+      .ownership-tier-features {
+        list-style: none;
+        padding: 0;
         margin: 0 0 1.5rem;
-        font-size: 0.97rem;
+        flex: 1;
       }
 
-      .tier-features-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0 1.5rem;
-      }
-
-      .tier-feature-item {
+      .ownership-tier-features li {
         display: flex;
         align-items: flex-start;
-        gap: 0.55rem;
+        gap: 0.6rem;
         padding: 0.5rem 0;
         border-bottom: 1px solid var(--line);
         font-size: 0.9rem;
         color: var(--muted);
       }
 
-      .tier-feature-item:nth-last-child(-n+2) {
+      .ownership-tier-features li:last-child {
         border-bottom: none;
       }
 
-      .tier-check {
+      .ownership-check {
         color: var(--brand);
         font-weight: 700;
         flex-shrink: 0;
         margin-top: 0.05rem;
       }
 
-      .tier-sidebar {
-        padding: 2rem 1.75rem;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .tier-sidebar-label {
-        font-size: 0.74rem;
-        font-weight: 800;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--brand);
-        margin-bottom: 0.85rem;
-      }
-
-      .tier-best-for {
-        list-style: none;
-        margin: 0 0 auto;
-        padding: 0;
-      }
-
-      .tier-best-for li {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.87rem;
-        color: var(--muted);
-        padding: 0.32rem 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .tier-best-for li:last-child {
-        border-bottom: none;
-      }
-
-      .tier-best-for li::before {
-        content: "";
-        display: inline-block;
-        width: 0.4rem;
-        height: 0.4rem;
-        border-radius: 50%;
-        background: var(--brand);
-        flex-shrink: 0;
-      }
-
-      .tier-sidebar .button {
-        margin-top: 1.5rem;
+      .ownership-tier-body .button {
         width: 100%;
-      }
-
-      /* Comparison table */
-      .tier-comparison {
-        margin-top: 1.5rem;
-        overflow-x: auto;
-        border-radius: var(--radius-lg);
-        border: 1px solid var(--line);
-        background: linear-gradient(160deg, rgba(255,255,255,0.92), rgba(255,252,248,0.85));
-        box-shadow: 0 8px 24px rgba(24, 33, 45, 0.05);
-      }
-
-      .tier-comparison table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 0.9rem;
-      }
-
-      .tier-comparison th {
-        padding: 1rem 1.25rem;
-        text-align: center;
-        font-weight: 700;
-        font-size: 0.84rem;
-        color: var(--ink);
-        background: rgba(232, 239, 255, 0.45);
-        border-bottom: 1px solid var(--line);
-      }
-
-      .tier-comparison th:first-child {
-        text-align: left;
-        color: var(--muted);
-        font-weight: 600;
-      }
-
-      .tier-comparison td {
-        padding: 0.8rem 1.25rem;
-        text-align: center;
-        color: var(--muted);
-        border-bottom: 1px solid var(--line);
-      }
-
-      .tier-comparison td:first-child {
-        text-align: left;
-        color: var(--ink);
-        font-weight: 500;
-      }
-
-      .tier-comparison tr:last-child td {
-        border-bottom: none;
-      }
-
-      .tier-comparison tr:hover td {
-        background: rgba(26, 61, 184, 0.025);
-      }
-
-      /* How It Works — 6 steps, 3-col */
-      .venture-step-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.25rem;
+        margin-top: auto;
       }
 
       /* Apply section */
@@ -454,67 +297,6 @@
         border-color: rgba(36, 80, 214, 0.5);
       }
 
-      /* Venture Partner equity tiers */
-      .venture-equity-tiers {
-        margin-top: 1.75rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid var(--line);
-      }
-
-      .venture-equity-label {
-        font-size: 0.74rem;
-        font-weight: 800;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--brand);
-        margin-bottom: 0.85rem;
-      }
-
-      .venture-equity-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.75rem;
-      }
-
-      .venture-equity-card {
-        padding: 1rem 1.1rem;
-        border-radius: var(--radius-md);
-        background: linear-gradient(160deg, rgba(232, 239, 255, 0.6), rgba(255, 255, 255, 0.85));
-        border: 1px solid rgba(26, 61, 184, 0.15);
-        text-align: center;
-      }
-
-      .venture-equity-card--mid {
-        background: linear-gradient(160deg, rgba(210, 225, 255, 0.7), rgba(232, 239, 255, 0.9));
-        border-color: rgba(26, 61, 184, 0.25);
-      }
-
-      .venture-equity-card--top {
-        background: linear-gradient(160deg, rgba(26, 61, 184, 0.1), rgba(12, 26, 79, 0.08));
-        border-color: rgba(26, 61, 184, 0.35);
-      }
-
-      .venture-equity-amount {
-        font-family: "Fraunces", serif;
-        font-size: 1.4rem;
-        font-weight: 600;
-        color: var(--brand-deep);
-        line-height: 1;
-        margin-bottom: 0.4rem;
-      }
-
-      .venture-equity-desc {
-        font-size: 0.78rem;
-        color: var(--muted);
-        line-height: 1.45;
-      }
-
-      @media (max-width: 640px) {
-        .venture-equity-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
       .venture-success {
         display: none;
         padding: 1.75rem;
@@ -529,38 +311,129 @@
 
       .venture-success.visible { display: block; }
 
+      /* Business Connector section */
+      .connector-section {
+        padding: clamp(2rem, 4vw, 3.5rem);
+        background: linear-gradient(160deg, rgba(247, 243, 235, 0.6), rgba(255, 255, 255, 0.9));
+        border-top: 1px solid var(--line);
+      }
+
+      .connector-gate-label {
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding: 0.3rem 1rem;
+        border-radius: 999px;
+        background: rgba(184, 137, 46, 0.12);
+        border: 1px solid rgba(184, 137, 46, 0.25);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #a67a28;
+      }
+
+      .connector-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+        margin-top: 1.5rem;
+      }
+
+      .connector-features {
+        list-style: none;
+        padding: 0;
+        margin: 1.25rem 0 1.75rem;
+      }
+
+      .connector-features li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+        padding: 0.45rem 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      .connector-features li:last-child {
+        border-bottom: none;
+      }
+
+      .connector-check {
+        color: #a67a28;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      .connector-aside {
+        padding: 1.75rem;
+        border-radius: var(--radius-xl);
+        background: linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(255, 252, 245, 0.85));
+        border: 1px solid rgba(184, 137, 46, 0.2);
+        box-shadow: 0 8px 24px rgba(24, 33, 45, 0.06);
+      }
+
+      .connector-aside h3 {
+        font-size: 1.15rem;
+        margin: 0 0 0.5rem;
+        color: var(--ink);
+      }
+
+      .connector-aside p {
+        font-size: 0.9rem;
+        color: var(--muted);
+        margin: 0 0 1.25rem;
+        line-height: 1.55;
+      }
+
+      .connector-stat-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.85rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .connector-stat {
+        padding: 1rem;
+        border-radius: var(--radius-md);
+        background: rgba(184, 137, 46, 0.07);
+        border: 1px solid rgba(184, 137, 46, 0.15);
+        text-align: center;
+      }
+
+      .connector-stat-val {
+        font-family: "Fraunces", serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #a67a28;
+        line-height: 1;
+        margin-bottom: 0.25rem;
+      }
+
+      .connector-stat-label {
+        font-size: 0.78rem;
+        color: var(--muted);
+        line-height: 1.4;
+      }
+
       /* Responsive */
       @media (max-width: 960px) {
-        .venture-stats-grid {
-          grid-template-columns: repeat(2, 1fr);
+        .qualify-banner {
+          grid-template-columns: 1fr;
+          gap: 1rem;
         }
 
-        .stakeholder-grid {
+        .ownership-tiers-grid {
           grid-template-columns: 1fr;
         }
 
-        .tier-body {
-          grid-template-columns: 1fr;
+        .ownership-tier-card--mid {
+          transform: none;
         }
 
-        .tier-body-main {
-          border-right: none;
-          border-bottom: 1px solid var(--line);
-        }
-
-        .tier-feature-item:nth-last-child(-n+2) {
-          border-bottom: 1px solid var(--line);
-        }
-
-        .tier-feature-item:last-child {
-          border-bottom: none;
-        }
-
-        .venture-step-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .venture-apply-grid {
+        .venture-apply-grid,
+        .connector-grid {
           grid-template-columns: 1fr;
           gap: 2rem;
         }
@@ -568,33 +441,18 @@
 
       @media (max-width: 640px) {
         .venture-hero,
-        .tier-section,
-        .venture-apply-section {
+        .ownership-tiers-section,
+        .venture-apply-section,
+        .connector-section {
           padding: 1.5rem 1.25rem;
         }
 
-        .tier-header {
-          padding: 1.5rem;
-          flex-direction: column;
-        }
-
-        .tier-price-block {
-          text-align: left;
-        }
-
-        .tier-body-main {
+        .qualify-banner {
+          margin: 1.5rem 1.25rem;
           padding: 1.5rem;
         }
 
-        .tier-features-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .tier-sidebar {
-          padding: 1.5rem;
-        }
-
-        .venture-step-grid {
+        .connector-stat-grid {
           grid-template-columns: 1fr;
         }
       }
@@ -609,7 +467,8 @@
         <nav class="topbar-nav">
           <a href="./chiropractors.html">For Practitioners</a>
           <a href="./brands.html">For Brands</a>
-          <a href="./venture.html" class="active">Venture Network</a>
+          <a href="./operators.html">Operators</a>
+          <a href="./venture.html" class="active">Venture Owners</a>
         </nav>
       </header>
 
@@ -617,370 +476,103 @@
 
         <!-- Hero -->
         <section class="venture-hero">
-          <span class="venture-tag">AltHealth Venture Network</span>
-          <h1>Build Your Own Wellness Commerce Venture</h1>
-          <p class="lede">Launch a practitioner-powered wellness marketplace in your niche, community, or region — powered by AltHealth's software, brand network, attribution engine, and proven playbooks.</p>
+          <span class="venture-tag">Venture Ownership</span>
+          <h1>Build a Category-Defining Wellness Commerce Venture</h1>
+          <p class="lede">AltHealth Venture Owners are qualified founders, operators, and institutional partners who build major wellness commerce ventures on our infrastructure — with 50% revenue share, profit share, and an equity grant commensurate with their buy-in.</p>
           <div class="cta-row">
-            <a class="button primary" href="#apply">Apply to the Network</a>
-            <a class="button tertiary" href="#tiers">View Operator Tiers</a>
+            <a class="button primary" href="#apply">Apply for Venture Ownership</a>
           </div>
-          <p class="microcopy"><em>You bring the relationships. We bring the rails.</em></p>
+          <p class="microcopy"><em>$25K–$100K buy-in &bull; 50% revenue share &bull; Equity grant &bull; Applications reviewed personally</em></p>
         </section>
 
-        <!-- Stats -->
-        <section class="opportunity-section">
-          <div class="venture-stats-grid">
-            <div>
-              <div class="venture-stat-val">$10T</div>
-              <div class="venture-stat-label">Wellness Economy</div>
-            </div>
-            <div>
-              <div class="venture-stat-val">3 Tiers</div>
-              <div class="venture-stat-label">Operator Paths</div>
-            </div>
-            <div>
-              <div class="venture-stat-val">Full</div>
-              <div class="venture-stat-label">Attribution &amp; Tracking</div>
-            </div>
-            <div>
-              <div class="venture-stat-val">Zero</div>
-              <div class="venture-stat-label">Inventory Required</div>
-            </div>
+        <!-- Qualification Gate -->
+        <div class="qualify-banner">
+          <div class="qualify-banner-icon">🔒</div>
+          <div>
+            <h2>This is not for everyone.</h2>
+            <p>Venture Ownership is a qualified opportunity. We review every application personally and not all are accepted. We're looking for proven operators, founders, and institutions with the network and commitment to build something significant.</p>
+            <ul class="qualify-criteria">
+              <li>Proven founders &amp; operators</li>
+              <li>National practitioner associations</li>
+              <li>Wellness media companies</li>
+              <li>Clinic group operators</li>
+              <li>International market builders</li>
+            </ul>
           </div>
-        </section>
+        </div>
 
-        <!-- Opportunity -->
-        <section class="split-section">
-          <div class="section-copy">
-            <p class="eyebrow">The Opportunity</p>
-            <h2>The $10T wellness economy needs better operators.</h2>
-            <p>Patients trust their practitioners. Practitioners know what works. Brands need authentic distribution. But no one has built the infrastructure to connect them at scale — until now.</p>
-            <p>AltHealth Venture Network lets qualified operators build and run their own practitioner-powered wellness commerce markets — with full software, brand, attribution, and monetization infrastructure provided.</p>
-            <div class="cta-row">
-              <a class="button primary" href="#apply">Apply to the Network</a>
-            </div>
-          </div>
-          <div class="section-media">
-            <div class="stakeholder-grid">
-              <div class="stakeholder-card">
-                <span class="stakeholder-icon">🏥</span>
-                <div>
-                  <h4>Brands</h4>
-                  <p>Need trusted, practitioner-led distribution with real attribution.</p>
-                </div>
-              </div>
-              <div class="stakeholder-card">
-                <span class="stakeholder-icon">👩‍⚕️</span>
-                <div>
-                  <h4>Practitioners</h4>
-                  <p>Want to recommend trusted products and earn transparently.</p>
-                </div>
-              </div>
-              <div class="stakeholder-card">
-                <span class="stakeholder-icon">🧑‍💼</span>
-                <div>
-                  <h4>Operators</h4>
-                  <p>Want to build a real business without building from scratch.</p>
-                </div>
-              </div>
-              <div class="stakeholder-card">
-                <span class="stakeholder-icon">🧑‍🤝‍🧑</span>
-                <div>
-                  <h4>Patients</h4>
-                  <p>Want to buy what their trusted practitioners actually recommend.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- What You Get -->
-        <section class="why-section">
-          <div class="why-copy">
-            <p class="eyebrow">Entrepreneurship-in-a-Box</p>
-            <h2>Everything you need to launch.</h2>
-            <p>AltHealth provides the infrastructure. You provide the relationships, hustle, and local trust.</p>
-          </div>
-          <div class="why-grid">
-            <div class="why-card">
-              <h3>⚙️ AltHealth Commerce OS</h3>
-              <p>Brand &amp; practitioner onboarding, attribution tracking, commission engine, analytics, and payout reporting.</p>
-            </div>
-            <div class="why-card">
-              <h3>📋 Launch Playbook</h3>
-              <p>30/60/90-day plan, brand pitch decks, practitioner scripts, webinar templates, and objection handling.</p>
-            </div>
-            <div class="why-card">
-              <h3>🎓 AltHealth Academy</h3>
-              <p>Wellness commerce training, FTC disclosure basics, brand sales, practitioner activation, and compliance certification.</p>
-            </div>
-            <div class="why-card">
-              <h3>🏷️ Brand Network</h3>
-              <p>Access to AltHealth's catalog of wellness brands, category collections, and campaign opportunities.</p>
-            </div>
-            <div class="why-card">
-              <h3>👩‍⚕️ Practitioner Tools</h3>
-              <p>Practitioner storefronts, recommendation links, patient-facing purchase flows, and activation campaigns.</p>
-            </div>
-            <div class="why-card">
-              <h3>🤝 Operator Council</h3>
-              <p>Monthly operator calls, leaderboards, best practice sharing, deal flow, and conflict resolution.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Operator Tiers -->
-        <section id="tiers" class="tier-section">
+        <!-- Investment Tiers -->
+        <section class="ownership-tiers-section">
           <div class="tier-copy">
-            <p class="eyebrow">Three Operator Tiers</p>
-            <h2>Choose your operator path.</h2>
-            <p>Start where you are. Grow into what you want to build.</p>
+            <p class="eyebrow">Investment Tiers</p>
+            <h2>Three levels of venture ownership.</h2>
+            <p>Choose your level of commitment. Each tier unlocks greater rights, equity, and upside.</p>
           </div>
+          <div class="ownership-tiers-grid">
 
-          <div class="tier-tabs" role="tablist">
-            <button class="tier-tab active" data-tier="partner" role="tab" aria-selected="true">🌱 Business Connector</button>
-            <button class="tier-tab" data-tier="operator" role="tab" aria-selected="false">🏗️ Market Operator</button>
-            <button class="tier-tab" data-tier="venture" role="tab" aria-selected="false">🚀 Venture Partner</button>
-          </div>
-
-          <!-- Business Connector -->
-          <div class="tier-panel active" data-panel="partner">
-            <div class="tier-card">
-              <div class="tier-header tier-header--partner">
-                <div>
-                  <div class="tier-icon">🌱</div>
-                  <h3>Business Connector</h3>
-                  <p>Earn by connecting brands &amp; practitioners to the network.</p>
-                </div>
-                <div class="tier-price-block">
-                  <div class="tier-price">Free to join</div>
-                  <div class="tier-price-detail">$0 setup &middot; $0/month</div>
-                </div>
+            <!-- $25K Entry -->
+            <div class="ownership-tier-card">
+              <div class="ownership-tier-header ownership-tier-header--entry">
+                <div class="ownership-tier-name">Entry</div>
+                <div class="ownership-tier-amount">$25,000</div>
+                <p class="ownership-tier-headline">Regional market rights + equity grant</p>
               </div>
-              <div class="tier-body">
-                <div class="tier-body-main">
-                  <p>Introduce brands and practitioners to AltHealth and earn a revenue share on the business you bring in — no market to operate, no exclusivity required.</p>
-                  <div class="tier-features-grid">
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> AltHealth Connector certification</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Referral dashboard &amp; tracking links</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Co-branded landing page</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Sales scripts &amp; email templates</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Connector training modules</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> 5–10% revenue share on referred business</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> 10% bonus on referred Venture Partners ($2,500–$10,000 payout)</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Performance-based upgrade path</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Access to brand &amp; practitioner network</div>
-                  </div>
-                </div>
-                <div class="tier-sidebar">
-                  <div class="tier-sidebar-label">Best For</div>
-                  <ul class="tier-best-for">
-                    <li>Wellness creators &amp; influencers</li>
-                    <li>Brand consultants</li>
-                    <li>Practitioner community builders</li>
-                    <li>Health coaches</li>
-                    <li>Clinic consultants</li>
-                  </ul>
-                  <a class="button primary" href="#apply">Become a Business Connector</a>
-                </div>
+              <div class="ownership-tier-body">
+                <ul class="ownership-tier-features">
+                  <li><span class="ownership-check">✓</span> Regional market rights</li>
+                  <li><span class="ownership-check">✓</span> Equity grant commensurate with buy-in</li>
+                  <li><span class="ownership-check">✓</span> 50% revenue share in your market</li>
+                  <li><span class="ownership-check">✓</span> Strategic vertical or regional rights</li>
+                  <li><span class="ownership-check">✓</span> Dedicated strategic support team</li>
+                  <li><span class="ownership-check">✓</span> Sub-operator rights</li>
+                  <li><span class="ownership-check">✓</span> Custom co-branding &amp; market identity</li>
+                </ul>
+                <a class="button primary" href="#apply">Apply at $25K</a>
               </div>
             </div>
-          </div>
 
-          <!-- Market Operator -->
-          <div class="tier-panel" data-panel="operator">
-            <div class="tier-card">
-              <div class="tier-header tier-header--operator">
-                <div>
-                  <div class="tier-icon">🏗️</div>
-                  <h3>Market Operator</h3>
-                  <p>Launch an AltHealth-powered market.</p>
-                </div>
-                <div class="tier-price-block">
-                  <div class="tier-price">From $10,000</div>
-                  <div class="tier-price-detail">$10,000 setup &middot; $1,000/month</div>
-                </div>
+            <!-- $50K Growth -->
+            <div class="ownership-tier-card ownership-tier-card--mid">
+              <div class="ownership-tier-header ownership-tier-header--growth">
+                <div class="ownership-tier-name">Growth</div>
+                <div class="ownership-tier-amount">$50,000</div>
+                <p class="ownership-tier-headline">Multi-market rights + enhanced equity</p>
               </div>
-              <div class="tier-body">
-                <div class="tier-body-main">
-                  <p>Build a practitioner-powered commerce network in your niche, geography, or community using AltHealth's platform, brand, and playbooks.</p>
-                  <div class="tier-features-grid">
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Defined market rights (niche/geo/community)</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Operator dashboard &amp; CRM tools</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Co-branded market page</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Full operator playbook</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Monthly group coaching</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> 30% revenue share in your market</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Covers brand subscriptions &amp; platform fees</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Conditional exclusivity on milestones</div>
-                  </div>
-                </div>
-                <div class="tier-sidebar">
-                  <div class="tier-sidebar-label">Best For</div>
-                  <ul class="tier-best-for">
-                    <li>Serious operators &amp; agency owners</li>
-                    <li>Wellness community leaders</li>
-                    <li>Category experts with networks</li>
-                    <li>Clinic growth specialists</li>
-                    <li>Former brand reps</li>
-                  </ul>
-                  <a class="button primary" href="#apply">Apply as Market Operator</a>
-                </div>
+              <div class="ownership-tier-body">
+                <ul class="ownership-tier-features">
+                  <li><span class="ownership-check">✓</span> Multi-market rights</li>
+                  <li><span class="ownership-check">✓</span> Enhanced equity grant</li>
+                  <li><span class="ownership-check">✓</span> 50% revenue share in your markets</li>
+                  <li><span class="ownership-check">✓</span> Profit share on market P&amp;L</li>
+                  <li><span class="ownership-check">✓</span> Dedicated strategic support team</li>
+                  <li><span class="ownership-check">✓</span> Sub-operator rights</li>
+                  <li><span class="ownership-check">✓</span> JV &amp; expansion rights</li>
+                </ul>
+                <a class="button primary" href="#apply">Apply at $50K</a>
               </div>
             </div>
-          </div>
 
-          <!-- Venture Partner -->
-          <div class="tier-panel" data-panel="venture">
-            <div class="tier-card">
-              <div class="tier-header tier-header--venture">
-                <div>
-                  <div class="tier-icon">🚀</div>
-                  <h3>Venture Partner</h3>
-                  <p>Build a category-defining wellness commerce venture.</p>
-                </div>
-                <div class="tier-price-block">
-                  <div class="tier-price">$25K – $100K</div>
-                  <div class="tier-price-detail">Buy-in &middot; Equity + 50% rev share</div>
-                </div>
+            <!-- $100K Strategic -->
+            <div class="ownership-tier-card ownership-tier-card--top">
+              <div class="ownership-tier-header ownership-tier-header--strategic">
+                <div class="ownership-tier-name">Strategic</div>
+                <div class="ownership-tier-amount">$100,000</div>
+                <p class="ownership-tier-headline">National / vertical rights + maximum equity</p>
               </div>
-              <div class="tier-body">
-                <div class="tier-body-main">
-                  <p>Partner with AltHealth to scale a major vertical, region, or institutional market. Receive 50% revenue share plus a commensurate equity grant based on your level of buy-in.</p>
-                  <div class="tier-features-grid">
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Strategic vertical or regional rights</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Dedicated strategic support team</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Sub-operator rights</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Custom co-branding &amp; market identity</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> 50% revenue share in your market</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Profit share on market P&amp;L</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> Equity grant commensurate with buy-in</div>
-                    <div class="tier-feature-item"><span class="tier-check">✓</span> JV &amp; expansion rights</div>
-                  </div>
-                  <div class="venture-equity-tiers">
-                    <div class="venture-equity-label">Investment Tiers</div>
-                    <div class="venture-equity-grid">
-                      <div class="venture-equity-card">
-                        <div class="venture-equity-amount">$25K</div>
-                        <div class="venture-equity-desc">Entry buy-in · Equity grant · Regional market rights</div>
-                      </div>
-                      <div class="venture-equity-card venture-equity-card--mid">
-                        <div class="venture-equity-amount">$50K</div>
-                        <div class="venture-equity-desc">Growth buy-in · Enhanced equity · Multi-market rights</div>
-                      </div>
-                      <div class="venture-equity-card venture-equity-card--top">
-                        <div class="venture-equity-amount">$100K</div>
-                        <div class="venture-equity-desc">Strategic buy-in · Maximum equity · National / vertical rights</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tier-sidebar">
-                  <div class="tier-sidebar-label">Best For</div>
-                  <ul class="tier-best-for">
-                    <li>Proven founders &amp; operators</li>
-                    <li>National practitioner associations</li>
-                    <li>Wellness media companies</li>
-                    <li>Clinic group operators</li>
-                    <li>International market builders</li>
-                  </ul>
-                  <a class="button primary" href="#apply">Apply as Venture Partner</a>
-                </div>
+              <div class="ownership-tier-body">
+                <ul class="ownership-tier-features">
+                  <li><span class="ownership-check">✓</span> National or vertical category rights</li>
+                  <li><span class="ownership-check">✓</span> Maximum equity grant</li>
+                  <li><span class="ownership-check">✓</span> 50% revenue share across your territory</li>
+                  <li><span class="ownership-check">✓</span> Profit share on full market P&amp;L</li>
+                  <li><span class="ownership-check">✓</span> Negotiated exclusivity</li>
+                  <li><span class="ownership-check">✓</span> Sub-operator rights</li>
+                  <li><span class="ownership-check">✓</span> JV &amp; international expansion rights</li>
+                </ul>
+                <a class="button primary" href="#apply">Apply at $100K</a>
               </div>
             </div>
-          </div>
 
-          <!-- Comparison Table -->
-          <div class="tier-comparison">
-            <table>
-              <thead>
-                <tr>
-                  <th>Feature</th>
-                  <th>🌱 Business Connector</th>
-                  <th>🏗️ Market Operator</th>
-                  <th>🚀 Venture Partner</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Buy-In / Setup</td><td>Free</td><td>$10,000</td><td>$25K – $100K</td></tr>
-                <tr><td>Monthly Fee</td><td>$0</td><td>$1,000</td><td>Custom</td></tr>
-                <tr><td>Revenue Share</td><td>5–10% + VP referral bonus</td><td>30%</td><td>50%</td></tr>
-                <tr><td>Equity Grant</td><td>—</td><td>—</td><td>✓ Commensurate with buy-in</td></tr>
-                <tr><td>Profit Share</td><td>—</td><td>—</td><td>✓</td></tr>
-                <tr><td>Market Rights</td><td>None</td><td>Conditional</td><td>Strategic</td></tr>
-                <tr><td>Exclusivity</td><td>—</td><td>Performance-based</td><td>Negotiated</td></tr>
-                <tr><td>Dedicated Support</td><td>Self-serve</td><td>Group coaching</td><td>Dedicated team</td></tr>
-                <tr><td>Sub-Operator Rights</td><td>—</td><td>—</td><td>✓</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <!-- How It Works -->
-        <section class="solution-section">
-          <div class="solution-copy">
-            <p class="eyebrow">The Path</p>
-            <h2>From application to venture.</h2>
-          </div>
-          <div class="venture-step-grid">
-            <div class="process-step">
-              <div class="step-number">01</div>
-              <h3>Apply</h3>
-              <p>Tell us about your network, niche, and operator goals.</p>
-            </div>
-            <div class="process-step">
-              <div class="step-number">02</div>
-              <h3>Pick Your Market</h3>
-              <p>Choose a geography, specialty, category, or community.</p>
-            </div>
-            <div class="process-step">
-              <div class="step-number">03</div>
-              <h3>Get Certified</h3>
-              <p>Complete AltHealth Academy training and compliance certification.</p>
-            </div>
-            <div class="process-step">
-              <div class="step-number">04</div>
-              <h3>Launch</h3>
-              <p>Onboard your first brands and practitioners using our playbooks.</p>
-            </div>
-            <div class="process-step">
-              <div class="step-number">05</div>
-              <h3>Activate</h3>
-              <p>Drive recommendations, campaigns, and community events.</p>
-            </div>
-            <div class="process-step">
-              <div class="step-number">06</div>
-              <h3>Scale &amp; Graduate</h3>
-              <p>Hit milestones, earn market rights, and grow to higher tiers.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Open Markets -->
-        <section class="network-section">
-          <div class="network-copy">
-            <p class="eyebrow" style="color: rgba(255,255,255,0.65);">Open Markets</p>
-            <h2 style="color: #fff;">Find your market.</h2>
-            <p>Operators can build markets by niche, specialty, geography, or community. Many categories are still open.</p>
-          </div>
-          <div class="category-grid">
-            <span class="category-tag">Functional Medicine</span>
-            <span class="category-tag">Women's Hormones</span>
-            <span class="category-tag">Gut Health</span>
-            <span class="category-tag">Longevity</span>
-            <span class="category-tag">Chiropractors</span>
-            <span class="category-tag">Mental Wellness</span>
-            <span class="category-tag">Sports Recovery</span>
-            <span class="category-tag">Ayurveda</span>
-            <span class="category-tag">Biohacking</span>
-            <span class="category-tag">Fertility</span>
-            <span class="category-tag">Sleep Health</span>
-            <span class="category-tag">Skin &amp; Dermatology</span>
-            <span class="category-tag">Naturopaths</span>
-            <span class="category-tag">Yoga Studios</span>
-            <span class="category-tag">Corporate Wellness</span>
-            <span class="category-tag">Pet Wellness</span>
-            <span class="category-tag" style="border-style: dashed; opacity: 0.55;">+ Your Market</span>
           </div>
         </section>
 
@@ -988,14 +580,14 @@
         <section id="apply" class="venture-apply-section">
           <div class="venture-apply-grid">
             <div class="venture-apply-copy">
-              <p class="eyebrow">Apply Now</p>
-              <h2>Ready to build your wellness commerce venture?</h2>
-              <p>Applications are reviewed for market fit, network strength, and operator readiness. We're accepting a founding cohort of operators now.</p>
+              <p class="eyebrow">Apply for Venture Ownership</p>
+              <h2>We review every application personally.</h2>
+              <p>Not all applications are accepted. We're looking for operators with real networks, genuine domain authority, and the commitment to build something lasting in the wellness economy.</p>
               <ul class="bullet-list">
                 <li>Applications reviewed within 48 hours</li>
                 <li>No commitment required to apply</li>
-                <li>All three tiers open for founding cohort</li>
-                <li>Founding operators get locked-in pricing</li>
+                <li>Founding partners get locked-in terms</li>
+                <li>All buy-in levels currently open</li>
               </ul>
             </div>
             <div>
@@ -1022,23 +614,24 @@
                   <input type="text" id="vf-company" name="company" placeholder="Your company or practice name" />
                 </div>
                 <div>
-                  <label class="venture-form-label" for="vf-tier">Which tier interests you?</label>
-                  <select id="vf-tier" name="tier">
-                    <option>🌱 Business Connector — Start earning from my network</option>
-                    <option>🏗️ Market Operator — Launch a defined market</option>
-                    <option>🚀 Venture Partner — Build a major wellness venture</option>
+                  <label class="venture-form-label" for="vf-investment">Investment level you're considering</label>
+                  <select id="vf-investment" name="investment_level">
+                    <option>$25,000 — Entry (Regional market rights)</option>
+                    <option>$50,000 — Growth (Multi-market rights)</option>
+                    <option>$100,000 — Strategic (National / vertical rights)</option>
+                    <option>Business Connector — I'm not ready for ownership yet</option>
                   </select>
                 </div>
                 <div>
-                  <label class="venture-form-label" for="vf-market">What market are you thinking about?</label>
+                  <label class="venture-form-label" for="vf-market">What market or vertical are you targeting?</label>
                   <input type="text" id="vf-market" name="market" placeholder="e.g. Functional Medicine, Women's Health, Austin TX…" />
                 </div>
                 <div>
-                  <label class="venture-form-label" for="vf-network">Tell us about your network</label>
-                  <textarea id="vf-network" name="network" placeholder="Who do you know? What communities do you serve? What's your background in wellness?"></textarea>
+                  <label class="venture-form-label" for="vf-network">Tell us about yourself and your network</label>
+                  <textarea id="vf-network" name="network" placeholder="Who do you know? What's your background? What makes you the right person to build this?"></textarea>
                 </div>
                 <button type="submit" class="button primary" style="width:100%;">Submit Application</button>
-                <p class="microcopy" style="text-align:center;"><em>We review all applications within 48 hours. No commitment required.</em></p>
+                <p class="microcopy" style="text-align:center;"><em>We review every application personally. Not all are accepted.</em></p>
               </form>
               <div class="venture-success" id="form04-success">
                 ✓ Application received! We'll be in touch within 48 hours.
@@ -1047,11 +640,48 @@
           </div>
         </section>
 
+        <!-- Business Connector section -->
+        <section class="connector-section">
+          <div class="connector-gate-label">Not ready for ownership?</div>
+          <h2>Start as a Business Connector.</h2>
+          <p style="max-width: 52ch; margin: 0.5rem 0 0; color: var(--muted);">Not everyone is ready to commit at the venture level — and that's okay. The Business Connector tier is a free entry point to earn while you build your track record with AltHealth.</p>
+          <div class="connector-grid">
+            <div>
+              <ul class="connector-features">
+                <li><span class="connector-check">✓</span> Free to join — $0 setup, $0/month</li>
+                <li><span class="connector-check">✓</span> AltHealth Connector certification</li>
+                <li><span class="connector-check">✓</span> Referral dashboard &amp; tracking links</li>
+                <li><span class="connector-check">✓</span> Co-branded landing page</li>
+                <li><span class="connector-check">✓</span> Sales scripts &amp; email templates</li>
+                <li><span class="connector-check">✓</span> 5–10% revenue share on referred business</li>
+                <li><span class="connector-check">✓</span> 10% bonus on referred Venture Partners ($2,500–$10,000 payout)</li>
+                <li><span class="connector-check">✓</span> Performance-based upgrade path to Operator or Owner</li>
+              </ul>
+              <a class="button primary" href="#apply">Apply as Business Connector</a>
+            </div>
+            <div class="connector-aside">
+              <h3>Earn while you build.</h3>
+              <p>Business Connectors introduce brands and practitioners to AltHealth and earn a revenue share on every deal they bring in — no market to operate, no buy-in required.</p>
+              <div class="connector-stat-grid">
+                <div class="connector-stat">
+                  <div class="connector-stat-val">5–10%</div>
+                  <div class="connector-stat-label">Revenue share on referred business</div>
+                </div>
+                <div class="connector-stat">
+                  <div class="connector-stat-val">$10K</div>
+                  <div class="connector-stat-label">Max VP referral bonus per partner</div>
+                </div>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--muted);">Best for: wellness creators, brand consultants, health coaches, practitioner community builders, and clinic consultants who want to earn from their network without a big commitment.</p>
+            </div>
+          </div>
+        </section>
+
         <!-- Final CTA -->
         <section class="done-section">
-          <p class="eyebrow">Join Us</p>
-          <h2>Ready to Get Started?</h2>
-          <p>Join the founding cohort of operators building the future of wellness commerce. Your network has value — it's time to build with it.</p>
+          <p class="eyebrow">Ready to Own Your Market?</p>
+          <h2>Apply for Venture Ownership today.</h2>
+          <p>Join AltHealth as a founding Venture Owner and build a category-defining wellness commerce venture. Applications are reviewed personally and founding terms are locked in for early partners.</p>
           <a class="button primary" href="#apply">Apply Now</a>
         </section>
 
@@ -1072,28 +702,10 @@
         <div class="socials">
           <a href="https://x.com/althealthme" target="_blank" rel="noopener">X</a>
           <a href="https://www.linkedin.com/company/althealthme" target="_blank" rel="noopener">LinkedIn</a>
-          
         </div>
       </footer>
     </div>
 
-    <script>
-      // Tier tab switcher
-      document.querySelectorAll('.tier-tab').forEach(tab => {
-        tab.addEventListener('click', () => {
-          document.querySelectorAll('.tier-tab').forEach(t => {
-            t.classList.remove('active');
-            t.setAttribute('aria-selected', 'false');
-          });
-          document.querySelectorAll('.tier-panel').forEach(p => p.classList.remove('active'));
-
-          tab.classList.add('active');
-          tab.setAttribute('aria-selected', 'true');
-          document.querySelector(`.tier-panel[data-panel="${tab.dataset.tier}"]`).classList.add('active');
-        });
-      });
-
-    </script>
     <script src="./script.js"></script>
   </body>
 </html>

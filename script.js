@@ -13,7 +13,11 @@ const formConfigs = {
   },
   form04: {
     recipient: "webforms@althealth.store",
-    subject: "AltHealth Venture Network Application",
+    subject: "AltHealth Venture Ownership Application",
+  },
+  form05: {
+    recipient: "webforms@althealth.store",
+    subject: "AltHealth Market Operator Application",
   },
 };
 
