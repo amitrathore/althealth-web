@@ -40,12 +40,12 @@ Each Partner shall own and control a fractional share of the Partnership represe
 
 Each person shall become a Partner in the Partnership by purchasing Partnership Units at one of the four tier levels, each initially priced as shown in the table below.
 
-| Partnership Tier | Buy-In Price | Partnership Units Awarded | Effective Unit Price | Effective Discount |
-|------------------|-------------|--------------------------|----------------------|--------------------|
-| VP1              | $5,000      | 1 Unit                   | $5,000.00            | —                  |
-| VP2              | $25,000     | 6 Units                  | $4,166.67            | 16.67%             |
-| VP3              | $50,000     | 12 Units                 | $4,166.67            | 16.67%             |
-| VP4              | $250,000    | 71 Units                 | $3,521.13            | 29.58%             |
+| Partnership Tier | Buy-In Price | Partnership Units Awarded |
+|------------------|-------------|--------------------------|
+| VP1              | $5,000      | 1 Unit                   |
+| VP2              | $25,000     | 6 Units                  |
+| VP3              | $50,000     | 13 Units                 |
+| VP4              | $250,000    | 71 Units                 |
 
 One Partner may hold more than one Partnership Unit across one or more tiers. There are no annual fees or maintenance charges. The Partnership may apply reasonable adjustments for inflation, market changes regarding currency values or economic conditions, and changes or extensions of business agreements, the specifics of which shall be shared with the Partners or their representatives before levy.
 
@@ -62,12 +62,12 @@ Annual distributions of profits and proceeds from Platform business operations s
 **8.1 Referral Bonuses**
 Each Partnership Unit held by active Partners entitles them to preferred access to the Platform features and benefits. Referring a qualified new Partner entitles the referring Partner to a one-time referral bonus based on the tier level of the newly enrolled Partner, as follows:
 
-| New Partner Tier | Referral Bonus to Referring Partner | Rate |
-|-----------------|--------------------------------------|------|
-| VP1 ($5,000)    | $500                                 | 10%  |
-| VP2 ($25,000)   | $2,000                               | 8%   |
-| VP3 ($50,000)   | $3,000                               | 6%   |
-| VP4 ($250,000)  | $10,000                              | 4%   |
+| New Partner Tier | Referral Bonus to Referring Partner |
+|-----------------|--------------------------------------|
+| VP1 ($5,000)    | $500                                 |
+| VP2 ($25,000)   | $2,000                               |
+| VP3 ($50,000)   | $3,000                               |
+| VP4 ($250,000)  | $10,000                              |
 
 Referral bonuses are paid upon the successful completion of the new Partner's buy-in and execution of this Agreement.
 
