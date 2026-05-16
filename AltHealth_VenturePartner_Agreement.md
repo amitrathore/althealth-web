@@ -62,12 +62,12 @@ Annual distributions of profits and proceeds from Platform business operations s
 **8.1 Referral Bonuses**
 Each Partnership Unit held by active Partners entitles them to preferred access to the Platform features and benefits. Referring a qualified new Partner entitles the referring Partner to a one-time referral bonus based on the tier level of the newly enrolled Partner, as follows:
 
-| New Partner Tier | Referral Bonus to Referring Partner |
-|-----------------|--------------------------------------|
-| VP1 ($5,000)    | $500                                 |
-| VP2 ($25,000)   | $2,000                               |
-| VP3 ($50,000)   | $4,000                               |
-| VP4 ($250,000)  | $20,000                              |
+| New Partner Tier | Referral Bonus to Referring Partner | Rate |
+|-----------------|--------------------------------------|------|
+| VP1 ($5,000)    | $500                                 | 10%  |
+| VP2 ($25,000)   | $2,000                               | 8%   |
+| VP3 ($50,000)   | $3,000                               | 6%   |
+| VP4 ($250,000)  | $10,000                              | 4%   |
 
 Referral bonuses are paid upon the successful completion of the new Partner's buy-in and execution of this Agreement.
 
