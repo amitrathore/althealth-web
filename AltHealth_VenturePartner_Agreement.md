@@ -40,12 +40,12 @@ Each Partner shall own and control a fractional share of the Partnership represe
 
 Each person shall become a Partner in the Partnership by purchasing Partnership Units at one of the four tier levels, each initially priced as shown in the table below.
 
-| Partnership Tier | Buy-In Price | Partnership Units Awarded |
-|------------------|-------------|--------------------------|
-| VP1              | $5,000      | 1 Unit                   |
-| VP2              | $25,000     | 5 Units                  |
-| VP3              | $50,000     | 10 Units                 |
-| VP4              | $250,000    | 50 Units                 |
+| Partnership Tier | Buy-In Price | Partnership Units Awarded | Effective Unit Price | Effective Discount |
+|------------------|-------------|--------------------------|----------------------|--------------------|
+| VP1              | $5,000      | 1 Unit                   | $5,000.00            | —                  |
+| VP2              | $25,000     | 6 Units                  | $4,166.67            | 16.67%             |
+| VP3              | $50,000     | 12 Units                 | $4,166.67            | 16.67%             |
+| VP4              | $250,000    | 71 Units                 | $3,521.13            | 29.58%             |
 
 One Partner may hold more than one Partnership Unit across one or more tiers. There are no annual fees or maintenance charges. The Partnership may apply reasonable adjustments for inflation, market changes regarding currency values or economic conditions, and changes or extensions of business agreements, the specifics of which shall be shared with the Partners or their representatives before levy.
 
