@@ -102,6 +102,7 @@ a {
 
 .topbar-nav {
   display: flex;
+  align-items: center;
   gap: 0.25rem;
 }
 
@@ -127,6 +128,8 @@ a {
 
 .topbar-nav .has-submenu {
   position: relative;
+  display: inline-flex;
+  align-items: center;
 }
 
 .topbar-nav .has-submenu > a::after {
