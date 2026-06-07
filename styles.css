@@ -140,7 +140,7 @@ a {
 
 .topbar-nav .submenu {
   position: absolute;
-  top: calc(100% + 6px);
+  top: 100%;
   left: 0;
   display: none;
   flex-direction: column;
@@ -153,6 +153,15 @@ a {
   border-radius: 14px;
   box-shadow: 0 16px 40px rgba(24, 33, 45, 0.1), 0 4px 12px rgba(24, 33, 45, 0.04);
   z-index: 30;
+}
+
+.topbar-nav .submenu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  height: 10px;
 }
 
 .topbar-nav .has-submenu:hover .submenu,
